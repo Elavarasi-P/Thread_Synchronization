@@ -1,3 +1,7 @@
+//CODING ASSIGNMENT 6
+//THREAD SYNCHRONIZATION
+//Create two threads, one to read and other to write from a shared buffer and ensure the threads are properly synchronized.
+
 #include <windows.h>
 #include <stdio.h>
 #include <string>
