@@ -8,6 +8,7 @@ HANDLE ghWriteEvent;
 HANDLE ghThreads;
 string buff="";
 
+//Thread Procedure invoked when reading thread is created
 DWORD WINAPI ThreadProc(LPVOID lpParam)
 {
 
@@ -40,6 +41,7 @@ DWORD WINAPI ThreadProc(LPVOID lpParam)
     return result;
 }
 
+//Function to create writing event and reading thread
 void CreateEventsAndThreads(void)
 {
     
@@ -73,6 +75,7 @@ void CreateEventsAndThreads(void)
     }
 }
 
+//Function to write into the buffer
 void WriteToBuffer(VOID)
 {
    
@@ -85,11 +88,13 @@ void WriteToBuffer(VOID)
     }
 }
 
+//Resource cleanup
 void CloseEvents()
 {
     CloseHandle(ghWriteEvent);
 }
 
+//Main function
 int main(void)
 {
     DWORD dwWaitResult;
